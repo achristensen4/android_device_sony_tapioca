@@ -12,7 +12,6 @@ bin/qmiproxy
 bin/qmuxd
 bin/rild
 bin/startupflag
-bin/thermald
 bin/updatemiscta
 bin/wiperiface
 etc/bcm4330/BCM4330B1_002.001.003.0750.0775.hcd
@@ -21,10 +20,11 @@ etc/bcm4330/sdio-g-mfgtest-seqcmds.bin
 etc/bcm4330/sdio_g_pool_pno_pktfilter_keepalive_wapi_wme_idsup_idauth_apsta_aoe.bin
 etc/bcm4330/sdio_g_pool_pno_pktfilter_keepalive_wapi_wme_idsup_idauth_p2p_aoe.bin
 etc/bcm4330/sdio_g_pool_pno_pktfilter_keepalive_wapi_wme_idsup_idauth_sta_aoe.bin
-etc/firmware/TAP_TMA340_0001.hex
 etc/firmware/TAP_TMA340_0002.hex
-etc/firmware/TAP_TMA340_0003.hex
-etc/firmware/TAP_TMA340_0004.hex
+etc/firmware/TAP_TMA340_0005.hex
+etc/firmware/TAP_TMA340_0006.hex
+etc/firmware/TAP_TMA340_0007.hex
+etc/firmware/TAP_TMA340_0008.hex
 lib/hw/camera.msm7x27a.so
 lib/hw/sensors.default.so
 lib/libdivxdrmdecrypt.so
@@ -98,7 +98,3 @@ lib/libril.so
 lib/libwms.so
 lib/libwmsts.so
 lib/libxml.so
-sbin/rmt_storage
-sbin/ta_rmt_storage
-sbin/tad
-sbin/wait4tad
