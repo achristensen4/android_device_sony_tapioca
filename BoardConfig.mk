@@ -8,14 +8,17 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca_ss/include
 
-TARGET_KERNEL_CONFIG := cm_tamsui_tap_defconfig
+TARGET_CPU_VARIANT := cortex-a5
+
+TARGET_KERNEL_CONFIG := tap_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/tapioca_ss/config/cmdline.txt
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/sony/tapioca_ss/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/sony/tapioca_ss/config/fstab.sony
+RECOVERY_FSTAB_VERSION := 2
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000
