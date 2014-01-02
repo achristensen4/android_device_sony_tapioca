@@ -8,8 +8,6 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca_ss/include
 
-TARGET_CPU_VARIANT := cortex-a5
-
 TARGET_KERNEL_CONFIG := tap_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/tapioca_ss/config/cmdline.txt
 
