@@ -5,6 +5,10 @@ on early-boot
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/enable 1
     exec /system/bin/battery_charging
+    
+    chown root system /sys/class/input/input4/mode
+    chown root system /sys/class/input/input4/bandwidth
+    chown root system /sys/class/input/input4/delay
 
 on post-fs
     #Permission for Lights
