@@ -1,15 +1,13 @@
-USE_CAMERA_STUB := true
-
 # inherit from the proprietary version
--include vendor/sony/tapioca_ss/BoardConfigVendor.mk
+include vendor/sony/tapioca/BoardConfigVendor.mk
 
 #inherit from the common tamsui definitions
--include device/sony/tamsui-common/BoardConfigCommon.mk
+include device/sony/tamsui-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca_ss/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca/include
 
 TARGET_KERNEL_CONFIG := cm_tamsui_tap_defconfig
-BOARD_KERNEL_CMDLINE := device/sony/tapioca_ss/config/cmdline.txt
+BOARD_KERNEL_CMDLINE := device/sony/tapioca/config/cmdline.txt
 
 # WiFi
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -28,7 +26,7 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 BOARD_VOLD_MAX_PARTITIONS := 16
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/sony/tapioca_ss/config/fstab.sony
+TARGET_RECOVERY_FSTAB := device/sony/tapioca/config/fstab.sony
 RECOVERY_FSTAB_VERSION := 2
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
@@ -42,4 +40,4 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p16
 
-TARGET_OTA_ASSERT_DEVICE := ST21i,tapioca_ss
+TARGET_OTA_ASSERT_DEVICE := ST21i,tapioca
