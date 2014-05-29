@@ -25,10 +25,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Charging animation resources
-$(call inherit-product, device/sony/tamsui-common/prebuilt/resources-mdpi.mk)
-
-# Inherit from tapioca_ss device
+# Inherit from tapioca device
 $(call inherit-product, device/sony/tapioca/tapioca.mk)
 
 # Set those variables here to overwrite the inherited values.

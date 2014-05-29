@@ -6,8 +6,9 @@ include device/sony/tamsui-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca/include
 
+# Kernel
 TARGET_KERNEL_CONFIG := cm_tamsui_tap_defconfig
-BOARD_KERNEL_CMDLINE := device/sony/tapioca/config/cmdline.txt
+BOARD_KERNEL_CMDLINE := device/sony/tapioca/rootdir/cmdline.txt
 
 # WiFi
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -26,8 +27,7 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 BOARD_VOLD_MAX_PARTITIONS := 16
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/sony/tapioca/config/fstab.sony
-RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/sony/tapioca/rootdir/fstab.sony
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000
@@ -36,7 +36,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-
 
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p16
 
