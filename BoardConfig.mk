@@ -23,6 +23,9 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/bcm4330/sdio_g_pool_pno_pktfilt
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/tapioca/bluedroid
+
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
 
