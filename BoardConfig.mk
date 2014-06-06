@@ -21,7 +21,6 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/etc/bcm4330/sdio_g_pool_pno_pktfilt
 WIFI_DRIVER_FW_PATH_AP           := "/system/etc/bcm4330/sdio_g_pool_pno_pktfilter_keepalive_wapi_wme_idsup_idauth_apsta_aoe.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/bcm4330/sdio_g_pool_pno_pktfilter_keepalive_wapi_wme_idsup_idauth_p2p_aoe.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
-BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/tapioca/bluedroid
@@ -39,7 +38,5 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-
-BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p16
 
 TARGET_OTA_ASSERT_DEVICE := ST21i,tapioca
