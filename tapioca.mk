@@ -42,10 +42,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.sony:root/fstab.sony
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/rmt_storage:root/sbin/rmt_storage \
-    $(LOCAL_PATH)/prebuilt/ta_rmt_service:root/sbin/ta_rmt_service \
-    $(LOCAL_PATH)/prebuilt/tad:root/sbin/tad \
-    $(LOCAL_PATH)/prebuilt/wait4tad:root/sbin/wait4tad
+    $(LOCAL_PATH)/rootdir/sbin/rmt_storage:root/sbin/rmt_storage \
+    $(LOCAL_PATH)/rootdir/sbin/ta_rmt_service:root/sbin/ta_rmt_service \
+    $(LOCAL_PATH)/rootdir/sbin/tad:root/sbin/tad \
+    $(LOCAL_PATH)/rootdir/sbin/wait4tad:root/sbin/wait4tad
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
