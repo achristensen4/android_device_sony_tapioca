@@ -47,3 +47,10 @@ service ril-daemon1 /system/bin/rild -c 1
     socket rild-debug1 stream 660 radio system
     user root
     group radio cache inet misc audio sdcard_r sdcard_rw qcom_oncrpc qcom_diag log
+
+# SEMC, TA Daemon
+service tad /sbin/tad /dev/block/mmcblk0 8,16,256
+    class trimarea
+    user root
+    group root
+    socket tad stream 0660 system system
