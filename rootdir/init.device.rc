@@ -31,18 +31,15 @@ on post-fs
     #buffer fix
     write /sys/module/msm_fb/parameters/align_buffer 1
     
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
-    --use_baudrate_for_download --tosleep 20000 --scopcm 0,4,0,0,0,0,0,0,3,0 \
-    --no2bytes --baudrate 3000000 --patchram /system/etc/bcm4330/BCM4330B1_002.001.003.0750.0775.hcd \
+service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm
     /dev/ttyHS0
     class main
     user bluetooth
     group bluetooth net_bt_admin qcom_oncrpc
-    disabled
     oneshot
 
 service ril-daemon1 /system/bin/rild -c 1
-    class late_start
+    class main
     socket rild1 stream 660 root radio
     socket rild-debug1 stream 660 radio system
     user root
@@ -50,7 +47,7 @@ service ril-daemon1 /system/bin/rild -c 1
 
 # SEMC, TA Daemon
 service tad /sbin/tad /dev/block/mmcblk0 8,16,256
-    class trimarea
+    class main
     user root
     group root
     socket tad stream 0660 system system
